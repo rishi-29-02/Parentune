@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <include
+        layout="@layout/app_bar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/ivPerson"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_margin="10dp"
+            app:strokeWidth="1dp"
+            app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="Rishi Mishra"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/ivPerson"
+            app:layout_constraintTop_toTopOf="@id/ivPerson"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_marginStart="10dp"
+            android:text="Share your experience and get help from the community"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivPerson"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivPerson"
+            app:layout_constraintTop_toBottomOf="@id/username"
+            app:layout_constraintVertical_bias="0.157" />
+
+        <TextView
+            android:id="@+id/tvStartTalk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="START TALK"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:paddingVertical="10dp"
+            android:paddingHorizontal="20dp"
+            android:background="@drawable/bg_grey"
+            app:layout_constraintStart_toEndOf="@id/ivPerson"
+            app:layout_constraintTop_toBottomOf="@id/ivPerson" />
+
+        <TextView
+            android:id="@+id/tvCheck"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Check your previous parent talks"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@id/ivPerson"
+            app:layout_constraintTop_toBottomOf="@id/tvStartTalk" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow"
+            android:layout_marginEnd="20dp"
+            app:layout_constraintTop_toTopOf="@id/tvCheck"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/grey"
+         android:layout_marginTop="15dp"
+        android:layout_height="2dp" />
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:scrollbars="none">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            app:singleLine="true"
+            app:chipSpacing="10dp">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cg1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:textStartPadding="10dp"
+                app:textEndPadding="10dp"
+                android:text="My Interests"
+                app:chipStrokeColor="@color/grey"
+                app:chipStrokeWidth="2dp"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cg2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:textStartPadding="10dp"
+                app:textEndPadding="10dp"
+                android:text="All"
+                app:chipStrokeColor="@color/grey"
+                app:chipStrokeWidth="2dp"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cg3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:textStartPadding="10dp"
+                app:textEndPadding="10dp"
+                android:text="Problem Behaviours"
+                app:chipStrokeColor="@color/grey"
+                app:chipStrokeWidth="2dp"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/cg4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:textStartPadding="10dp"
+                app:textEndPadding="10dp"
+                android:text="Baby Names"
+                app:chipStrokeColor="@color/grey"
+                app:chipStrokeWidth="2dp"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTaskList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/item_talklist"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</LinearLayout>

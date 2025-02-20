@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:background="@color/grey"
+            android:layout_height="2dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivPerson"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_margin="10dp"
+                app:strokeWidth="1dp"
+                app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Rishi Mishra"
+                android:textStyle="bold"
+                android:layout_marginStart="15dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toEndOf="@id/ivPerson"
+                app:layout_constraintTop_toTopOf="@id/ivPerson"/>
+
+            <TextView
+                android:id="@+id/tvAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:text="Hello"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/ivPerson"
+                app:layout_constraintStart_toEndOf="@id/ivPerson"
+                app:layout_constraintTop_toBottomOf="@id/username" />
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30 mins ago"
+                android:textSize="14sp"
+                android:layout_marginEnd="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/username" />
+
+            <ImageView
+                android:id="@+id/ivNearby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tvTime"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/nearyou" />
+
+            <TextView
+                android:id="@+id/tvDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/ivPerson"
+                app:layout_constraintTop_toBottomOf="@id/ivPerson"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                />
+
+            <View
+                android:id="@+id/ivLine"
+                android:layout_width="0dp"
+                android:background="@color/grey"
+                app:layout_constraintTop_toBottomOf="@id/tvDesc"
+                app:layout_constraintEnd_toEndOf="@id/tvDesc"
+                android:layout_marginEnd="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintStart_toStartOf="@id/ivPerson"
+                android:layout_height="2dp" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/ivCommentPerson"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_margin="10dp"
+                app:strokeWidth="1dp"
+                app:layout_constraintStart_toStartOf="@id/ivLine"
+                app:layout_constraintTop_toBottomOf="@id/ivLine"
+                app:shapeAppearanceOverlay="@style/CircleImageViewStyle"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Be the first to help with your advice"
+                app:layout_constraintStart_toEndOf="@id/ivCommentPerson"
+                app:layout_constraintTop_toTopOf="@id/ivCommentPerson"
+                android:layout_marginStart="10dp"
+                app:layout_constraintBottom_toBottomOf="@id/ivCommentPerson"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</layout>
